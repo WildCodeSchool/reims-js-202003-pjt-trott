@@ -1,0 +1,30 @@
+### CREATE
+POST http://localhost:8000/user
+Content-Type: application/json
+
+{
+    "lastname" : "Dusse",
+    "firstname" : "Jean-Claude",
+    "birthday" : "1985-06-11",
+    "email" : "jcdusse@outlook.fr",
+    "phone" : "06-75-75-75-75",
+    "tree" : 1,
+    "Km traveled" : 0
+}
+
+### READ
+GET http://localhost:8000/user 
+
+### READ id
+GET http://localhost:8000/user/1
+
+### UPDATE
+PUT http://localhost:8000/user/1
+Content-Type: application/json
+
+{
+    "fistname" :"J-C"
+}
+
+### DELETE
+DELETE http://localhost:8000/user/1
