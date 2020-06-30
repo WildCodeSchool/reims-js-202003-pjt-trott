@@ -1,5 +1,6 @@
 //création de la base de données User
 CREATE DATABASE trottTest;
+USE trottTest;
 CREATE TABLE user( ID INT NOT NULL PRIMARY KEY AUTO_INCREMENT , `lastname` VARCHAR(50) NOT NULL, `firstname` VARCHAR(50) NOT NULL , `birthday` DATE NOT NULL, `email`  VARCHAR(100) NOT NULL, `phone` VARCHAR(20) NOT NULL ,`tree` INT NULL , `Km_traveled` INT NULL ); 
 
 
