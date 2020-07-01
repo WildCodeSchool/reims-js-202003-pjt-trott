@@ -1,5 +1,5 @@
 ### CREATE
-POST http://localhost:8000/user
+POST http://localhost:8000/api/users
 Content-Type: application/json
 
 {
@@ -9,17 +9,17 @@ Content-Type: application/json
     "email" : "jcdusse@outlook.fr",
     "phone" : "06-75-75-75-75",
     "tree" : 1,
-    "Km traveled" : 0
+    "Km traveled" : 0,
 }
 
 ### READ
-GET http://localhost:8000/user 
+GET http://localhost:8000/api/users
 
 ### READ id
-GET http://localhost:8000/user/1
+GET http://localhost:8000/api/users/1
 
 ### UPDATE
-PUT http://localhost:8000/user/1
+PUT http://localhost:8000/api/users/1
 Content-Type: application/json
 
 {
@@ -27,4 +27,20 @@ Content-Type: application/json
 }
 
 ### DELETE
-DELETE http://localhost:8000/user/1
+DELETE http://localhost:8000/api/users/1
+
+###GET 
+GET http://localhost:8000/api/login
+
+###POST
+POST http://localhost:8000/api/login/login
+Content-Type: application/json
+
+{ 
+    "email": "user@user.com",
+    "password": "0000"
+}
+
+###GET
+GET http://localhost:8000/api/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE1OTM1OTMwMzksImV4cCI6MTU5MzY3OTQzOX0.XEXHSbMRk_2RFrU31PhiDprL1RxNXFKTk9d_6OexSoQ
