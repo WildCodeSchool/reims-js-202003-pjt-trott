@@ -30,10 +30,10 @@ Content-Type: application/json
 DELETE http://localhost:8000/api/users/1
 
 ###GET 
-GET http://localhost:8000/api/login
+GET http://localhost:8000/api/users
 
 ###POST
-POST http://localhost:8000/api/login/login
+POST http://localhost:8000/api/auth/login
 Content-Type: application/json
 
 { 
@@ -42,5 +42,5 @@ Content-Type: application/json
 }
 
 ###GET
-GET http://localhost:8000/api/users
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE1OTM1OTMwMzksImV4cCI6MTU5MzY3OTQzOX0.XEXHSbMRk_2RFrU31PhiDprL1RxNXFKTk9d_6OexSoQ
+GET http://localhost:8000/api/login
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE1OTM2MDc2ODAsImV4cCI6MTU5MzY5NDA4MH0.lwZSEyWH7zerj3xQ7NLSR1WQX0oLXCFToXph1PRhZzM

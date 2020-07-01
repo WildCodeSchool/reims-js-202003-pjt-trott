@@ -7,8 +7,8 @@ const router = express.Router();
 const { getAllUsers } = require('../controllers/users-controller');
 const { authenticateWithJwt } = require('../services/jwt');
 
-router.get('/users', authenticateWithJwt, getAllUsers);
-/*router.use('/users', users);*/
-router.use('/login', login);
+router.get('/login', authenticateWithJwt, getAllUsers);
+router.use('/users', users);
+router.use('/auth', login);
 
 module.exports = router;
