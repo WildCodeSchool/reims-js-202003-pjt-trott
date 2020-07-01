@@ -1,3 +1,3 @@
 node_modules/
-conf.js/
-.env/
+conf.js
+.env
