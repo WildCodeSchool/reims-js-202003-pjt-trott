@@ -1,8 +1,14 @@
 const express = require('express');
 const users = require('./user')
+const login = require('./login')
 
 const router = express.Router();
 
-router.use('/users', users);
+const { getAllUsers } = require('../controllers/users-controller');
+const { authenticateWithJwt } = require('../services/jwt');
+
+router.get('/users', authenticateWithJwt, getAllUsers);
+/*router.use('/users', users);*/
+router.use('/login', login);
 
 module.exports = router;
