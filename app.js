@@ -12,7 +12,7 @@ app.use(express.urlencoded({
   extended: true
 }));
 
-app.use('/api', api)
+app.use('/', api)
 
 app.get('/', (request,response) => {
   response.send({message: `Hello World`})
