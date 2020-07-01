@@ -2,9 +2,8 @@ const express = require('express');
 const connection = require('../conf');
 const router = express.Router();
 
-
 router.get('/', (req, res) => {
-  connection.query('SELECT * from User', (err, results) => {
+  connection.query('SELECT * from user', (err, results) => {
     if(err) {
       return(
         res.status(500).send(`We didn't find users `)
@@ -16,7 +15,7 @@ router.get('/', (req, res) => {
 
 router.get('/:id', (req, res) => {
   const {id} = req.params
-  connection.query('SELECT * FROM User WHERE ID = ?', id, (err, results) => {
+  connection.query('SELECT * FROM user WHERE ID = ?', id, (err, results) => {
     if(err) {
       return(
         res.status(500).send('Internal server error')
@@ -36,7 +35,7 @@ router.post('/', (req, res) => {
   if (postUser.lastname == null || postUser.lastname == ''){
     res.status(400).send("le nom de l'utilisateur a été mal renseigné")
   }
-  connection.query('INSERT INTO User SET ?', postUser, (err, results) => {
+  connection.query('INSERT INTO user SET ?', postUser, (err, results) => {
     if (err) {
       return (
         res.status(500).send("Erreur lors de la sauvegarde d'un utilisateur")
@@ -51,7 +50,7 @@ router.put('/:id', (req, res) => {
 
   const putUser = req.params.id;
   const formData = req.body;
-  connection.query('UPDATE User SET ? WHERE ID = ?', [formData, putUser], (err, results) => {
+  connection.query('UPDATE user SET ? WHERE ID = ?', [formData, putUser], (err, results) => {
     if (err) {
       return (
         res.status(500).send("Erreur lors de la modification des donneés")
@@ -69,7 +68,7 @@ router.put('/:id', (req, res) => {
 router.delete('/:id', (req, res) => {
   const deleteUser = req.params.id;
 
-  connection.query('DELETE FROM User WHERE id = ?', [deleteUser], err => {
+  connection.query('DELETE FROM user WHERE id = ?', [deleteUser], err => {
     if (err) {
       return (
         res.status(500).send("Internal server error")
@@ -79,7 +78,6 @@ router.delete('/:id', (req, res) => {
     }
   });
 });
-
 
 module.exports = router
 
