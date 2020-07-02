@@ -1,5 +1,5 @@
 ### CREATE
-POST http://localhost:8000/api/users
+POST http://localhost:8000/users
 Content-Type: application/json
 
 {
@@ -13,13 +13,13 @@ Content-Type: application/json
 }
 
 ### READ
-GET http://localhost:8000/api/users
+GET http://localhost:8000/users
 
 ### READ id
-GET http://localhost:8000/api/users/1
+GET http://localhost:8000/users/1
 
 ### UPDATE
-PUT http://localhost:8000/api/users/1
+PUT http://localhost:8000/users/1
 Content-Type: application/json
 
 {
@@ -27,13 +27,13 @@ Content-Type: application/json
 }
 
 ### DELETE
-DELETE http://localhost:8000/api/users/1
+DELETE http://localhost:8000/users/1
 
 ###GET 
-GET http://localhost:8000/api/users
+GET http://localhost:8000/users
 
 ###POST
-POST http://localhost:8000/api/auth/login
+POST http://localhost:8000/auth/login
 Content-Type: application/json
 
 { 
@@ -42,5 +42,5 @@ Content-Type: application/json
 }
 
 ###GET
-GET http://localhost:8000/api/login
+GET http://localhost:8000/login
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE1OTM2MDc2ODAsImV4cCI6MTU5MzY5NDA4MH0.lwZSEyWH7zerj3xQ7NLSR1WQX0oLXCFToXph1PRhZzM
