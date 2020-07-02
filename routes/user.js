@@ -2,7 +2,6 @@ const express = require('express');
 const connection = require('../conf');
 const router = express.Router();
 
-
 router.get('/', (req, res) => {
   connection.query('SELECT * from user', (err, results) => {
     if(err) {
@@ -79,7 +78,6 @@ router.delete('/:id', (req, res) => {
     }
   });
 });
-
 
 module.exports = router
 
