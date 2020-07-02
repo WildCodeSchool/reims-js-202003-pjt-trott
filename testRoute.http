@@ -13,7 +13,8 @@ Content-Type: application/json
 }
 
 ### READ
-GET http://localhost:8000/api/users
+GET http://localhost:8000/api/users 
+
 
 ### READ id
 GET http://localhost:8000/api/users/1
@@ -28,6 +29,7 @@ Content-Type: application/json
 
 ### DELETE
 DELETE http://localhost:8000/api/users/1
+
 
 ###GET 
 GET http://localhost:8000/api/login
@@ -44,3 +46,19 @@ Content-Type: application/json
 ###GET
 GET http://localhost:8000/api/users
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE1OTM1OTMwMzksImV4cCI6MTU5MzY3OTQzOX0.XEXHSbMRk_2RFrU31PhiDprL1RxNXFKTk9d_6OexSoQ
+
+### GET REGISTER USER
+GET http://localhost:8000/api/register
+
+### GET REGISTER USER BY ID
+GET http://localhost:8000/api/register/1
+
+### CREATE USER WITH REGISTER
+POST http://localhost:8000/api/register 
+Content-Type: application/json
+
+{
+    "username" : "Titi",
+    "email" : "titi@wild.com",
+    "password" : "azerty"
+

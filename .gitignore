@@ -1,5 +1,6 @@
-node_modules/
-conf.js/
-.env/
-keys.js/
+
+node_modules
+conf.js
+.env
+keys.js
 

@@ -2,7 +2,6 @@
 
 DROP Database trottTest;
 
-
 CREATE DATABASE trottTest;
 
 USE trottTest;
