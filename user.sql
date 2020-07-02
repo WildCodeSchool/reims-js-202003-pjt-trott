@@ -2,10 +2,9 @@
 
 DROP Database trottTest;
 
-
 CREATE DATABASE trottTest;
 
-
+USE trottTest;
 
 CREATE TABLE user( 
 	id INT NOT NULL PRIMARY KEY AUTO_INCREMENT ,
@@ -19,7 +18,6 @@ CREATE TABLE user(
 	`tree` INT NULL ,
 	`points` INT NULL,  
 	`Km_traveled` INT NULL ); 
-
 
 // Création de données exemples pour le tableau User
 INSERT INTO user( username, password , email ) VALUES ('TOTO','totoPassword', 'testemail@test.com'), ('Test2','TestPassWord', 'testemail@test.com');
