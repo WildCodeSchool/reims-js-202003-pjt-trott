@@ -23,7 +23,7 @@ router.get('/:id', (req, res) => {
     }
     if (results.length === 0) {
       return(
-        res.status(404).send('UserId is not found')
+        res.status(404).send('userId is not found')
       )
     }
     res.json(results)
