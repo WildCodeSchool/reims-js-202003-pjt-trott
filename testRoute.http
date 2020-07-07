@@ -40,13 +40,13 @@ POST http://localhost:8000/auth/login
 Content-Type: application/json
 
 { 
-    "email": "user@user.com",
-    "password": "0000"
+    "email": "titi@wild.com",
+    "password": "azerty"
 }
 
 ###GET
 GET http://localhost:8000/login
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE1OTM2MDc2ODAsImV4cCI6MTU5MzY5NDA4MH0.lwZSEyWH7zerj3xQ7NLSR1WQX0oLXCFToXph1PRhZzM
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE1OTM3NjM1NzQsImV4cCI6MTU5Mzg0OTk3NH0.wlTh0YSP7KcMVEbj_g-HuebVQQPGVRmQrCyZiEe4Vc0
 
 #DELETE
 DELETE http://localhost:8000/users/1

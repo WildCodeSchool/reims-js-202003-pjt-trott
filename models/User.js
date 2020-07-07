@@ -13,7 +13,7 @@ const cleanUser = (user) => {
  
 User.findByEmailAndPassword = (email, password, callback) => {
     connection.query(
-        `SELECT * FROM login WHERE email = ? AND passwordHash = SHA2(?, 256)`,
+        `SELECT * FROM user WHERE email = ? AND password = SHA2(?, 256)`,
         [email, password],
         (err, results, fields) => callback(err, cleanUser(results), fields)
     )
@@ -21,7 +21,7 @@ User.findByEmailAndPassword = (email, password, callback) => {
 
 User.getAll = (callback) => {
     connection.query(
-        `SELECT id, email FROM login`,
+        `SELECT id, email FROM user`,
         (err, results, fields) => callback(err, results, fields)
     )
 }

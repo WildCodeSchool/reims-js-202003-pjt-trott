@@ -7,7 +7,7 @@ const router = express.Router();
 
 const { getAllUsers } = require('../controllers/users-controller');
 const { authenticateWithJwt } = require('../services/jwt');
-const register = require('./routes/register');
+
 
 router.get('/login', authenticateWithJwt, getAllUsers);
 router.use('/users', users);
