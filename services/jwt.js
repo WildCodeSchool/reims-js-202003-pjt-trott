@@ -3,7 +3,7 @@ const expressJwt = require('express-jwt');
 
 const JWT_KEY = 'random_string';
 
-const  createToken = user => (
+const createToken = user => (
   jwt.sign(
     { id: user.id },
     JWT_KEY,

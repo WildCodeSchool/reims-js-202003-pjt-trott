@@ -1,4 +1,3 @@
-//création de la base de données User
 
 DROP Database trottTest;
 
@@ -9,7 +8,7 @@ USE trottTest;
 CREATE TABLE user( 
 	id INT NOT NULL PRIMARY KEY AUTO_INCREMENT ,
 	`username`  VARCHAR(50) NOT NULL , 
-	`password` VARBINARY(160) NOT NULL, 
+	`password` VARCHAR(60) NOT NULL, 
 	`email`  VARCHAR(100) NOT NULL,
 	`lastname` VARCHAR(50)  NULL, 
 	`firstname` VARCHAR(50)  NULL , 
@@ -19,8 +18,4 @@ CREATE TABLE user(
 	`points` INT NULL,  
 	`Km_traveled` INT NULL ); 
 
-// Création de données exemples pour le tableau User
-INSERT INTO user( username, password , email ) VALUES ('TOTO','totoPassword', 'testemail@test.com'), ('Test2','TestPassWord', 'testemail@test.com');
-
-
-
+INSERT INTO user( username, password , email ) VALUES ('TOTO','$2b$10$Pft5.luOXfdPrkpxSKjCb.kKMz7TOQGu1APSFVrZ/lUsLVdW91o2i', 'testemail@test.com'), ('Test2','$2b$10$UHcjjbngxBeaJZ2Jo9eeOesNJYdXaOPJa1O6RwQOhnzNFIwlSHswK', 'testemail@test.com');

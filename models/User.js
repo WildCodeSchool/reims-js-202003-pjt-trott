@@ -5,17 +5,17 @@ const cleanUser = (user) => {
     return user ?
         {
             ...user,
-            passwordHash: 'hidden'
+            password: 'hidden'
         } :
         undefined;
 };
  
  
-User.findByEmailAndPassword = (email, password, callback) => {
+User.findByUsername = (username, callback) => {
     connection.query(
-        `SELECT * FROM user WHERE email = ? AND password = SHA2(?, 256)`,
-        [email, password],
-        (err, results, fields) => callback(err, cleanUser(results), fields)
+        `SELECT * FROM user WHERE username = ?`,
+        [username],
+        (err, results, fields) => callback(err, results[0], fields)
     )
 }
 
