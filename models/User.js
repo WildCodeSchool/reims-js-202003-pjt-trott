@@ -11,7 +11,7 @@ const cleanUser = (user) => {
 };
  
  
-User.findByUsername = (username, password, callback) => {
+User.findByUsername = (username, callback) => {
     connection.query(
         `SELECT * FROM user WHERE username = ?`,
         [username],

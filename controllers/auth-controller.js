@@ -5,7 +5,7 @@ const bcrypt = require('bcrypt');
 
 const loginUser = (req, res, next) => {
 	const { username, password } = req.body;
-	User.findByUsername(username, password, (err, user) => {
+	User.findByUsername(username, (err, user) => {
 		console.log(user)
 		if (err) {
 			res.status(500).send('Erreur')
